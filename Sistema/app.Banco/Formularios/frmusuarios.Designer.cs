@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.iconCerrar = new FontAwesome.Sharp.IconButton();
+            this.iconEliminar = new FontAwesome.Sharp.IconButton();
+            this.iconAgregar = new FontAwesome.Sharp.IconButton();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvListado = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconCerrar = new FontAwesome.Sharp.IconButton();
-            this.iconEliminar = new FontAwesome.Sharp.IconButton();
-            this.iconAgregar = new FontAwesome.Sharp.IconButton();
-            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelContenido.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -53,6 +53,66 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // iconCerrar
+            // 
+            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconCerrar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
+            this.iconCerrar.IconColor = System.Drawing.Color.Black;
+            this.iconCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCerrar.IconSize = 30;
+            this.iconCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconCerrar.Location = new System.Drawing.Point(261, 3);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconCerrar.Size = new System.Drawing.Size(122, 42);
+            this.iconCerrar.TabIndex = 2;
+            this.iconCerrar.Text = "Cerrrar";
+            this.iconCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconCerrar, "Cerrar ventana");
+            this.iconCerrar.UseVisualStyleBackColor = true;
+            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
+            // 
+            // iconEliminar
+            // 
+            this.iconEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.iconEliminar.IconColor = System.Drawing.Color.Black;
+            this.iconEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconEliminar.IconSize = 30;
+            this.iconEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconEliminar.Location = new System.Drawing.Point(132, 3);
+            this.iconEliminar.Name = "iconEliminar";
+            this.iconEliminar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconEliminar.Size = new System.Drawing.Size(122, 42);
+            this.iconEliminar.TabIndex = 1;
+            this.iconEliminar.Text = "Eliminar";
+            this.iconEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconEliminar, "Eliminar registro");
+            this.iconEliminar.UseVisualStyleBackColor = true;
+            this.iconEliminar.Click += new System.EventHandler(this.iconEliminar_Click);
+            // 
+            // iconAgregar
+            // 
+            this.iconAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.iconAgregar.IconColor = System.Drawing.Color.Black;
+            this.iconAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAgregar.IconSize = 30;
+            this.iconAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconAgregar.Location = new System.Drawing.Point(3, 3);
+            this.iconAgregar.Name = "iconAgregar";
+            this.iconAgregar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconAgregar.Size = new System.Drawing.Size(123, 42);
+            this.iconAgregar.TabIndex = 0;
+            this.iconAgregar.Text = "Agregar";
+            this.iconAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconAgregar, "Agregar registro");
+            this.iconAgregar.UseVisualStyleBackColor = true;
+            this.iconAgregar.Click += new System.EventHandler(this.iconAgregar_Click);
             // 
             // panelContenido
             // 
@@ -106,30 +166,30 @@
             this.dgvListado.AllowUserToAddRows = false;
             this.dgvListado.AllowUserToDeleteRows = false;
             this.dgvListado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListado.BackgroundColor = System.Drawing.Color.White;
             this.dgvListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListado.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListado.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListado.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListado.EnableHeadersVisualStyles = false;
             this.dgvListado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -198,91 +258,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(495, 48);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 13);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(994, 38);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(988, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Módulo de Usuarios";
-            // 
-            // iconCerrar
-            // 
-            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconCerrar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
-            this.iconCerrar.IconColor = System.Drawing.Color.Black;
-            this.iconCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCerrar.IconSize = 30;
-            this.iconCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconCerrar.Location = new System.Drawing.Point(261, 3);
-            this.iconCerrar.Name = "iconCerrar";
-            this.iconCerrar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconCerrar.Size = new System.Drawing.Size(122, 42);
-            this.iconCerrar.TabIndex = 2;
-            this.iconCerrar.Text = "Cerrrar";
-            this.iconCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconCerrar, "Cerrar ventana");
-            this.iconCerrar.UseVisualStyleBackColor = true;
-            // 
-            // iconEliminar
-            // 
-            this.iconEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconEliminar.IconColor = System.Drawing.Color.Black;
-            this.iconEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconEliminar.IconSize = 30;
-            this.iconEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconEliminar.Location = new System.Drawing.Point(132, 3);
-            this.iconEliminar.Name = "iconEliminar";
-            this.iconEliminar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconEliminar.Size = new System.Drawing.Size(122, 42);
-            this.iconEliminar.TabIndex = 1;
-            this.iconEliminar.Text = "Eliminar";
-            this.iconEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconEliminar, "Eliminar registro");
-            this.iconEliminar.UseVisualStyleBackColor = true;
-            this.iconEliminar.Click += new System.EventHandler(this.iconEliminar_Click);
-            // 
-            // iconAgregar
-            // 
-            this.iconAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.iconAgregar.IconColor = System.Drawing.Color.Black;
-            this.iconAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAgregar.IconSize = 30;
-            this.iconAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconAgregar.Location = new System.Drawing.Point(3, 3);
-            this.iconAgregar.Name = "iconAgregar";
-            this.iconAgregar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconAgregar.Size = new System.Drawing.Size(123, 42);
-            this.iconAgregar.TabIndex = 0;
-            this.iconAgregar.Text = "Agregar";
-            this.iconAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconAgregar, "Agregar registro");
-            this.iconAgregar.UseVisualStyleBackColor = true;
-            this.iconAgregar.Click += new System.EventHandler(this.iconAgregar_Click);
-            // 
             // txtBuscar
             // 
             this.txtBuscar.BorderColor = System.Drawing.SystemColors.ActiveCaption;
@@ -311,6 +286,32 @@
             this.txtBuscar.Size = new System.Drawing.Size(487, 38);
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 13);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(994, 38);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(988, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Módulo de Usuarios";
             // 
             // frmusuarios
             // 

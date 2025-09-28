@@ -114,6 +114,11 @@ namespace app.Banco.Formularios
             }
         }
 
+        private void iconCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         #endregion
 
         #region Eventos del DataGridView
